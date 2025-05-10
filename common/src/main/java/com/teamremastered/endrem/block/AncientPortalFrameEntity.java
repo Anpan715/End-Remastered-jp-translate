@@ -1,7 +1,6 @@
 package com.teamremastered.endrem.block;
 
 import com.teamremastered.endrem.EndRemasteredCommon;
-import com.teamremastered.endrem.Constants;
 import com.teamremastered.endrem.registry.CommonBlockRegistry;
 import net.minecraft.client.resources.model.Material;
 import net.minecraft.core.BlockPos;
@@ -31,7 +30,7 @@ public class AncientPortalFrameEntity  extends BlockEntity {
     @Override
     protected void loadAdditional(CompoundTag nbt, HolderLookup.Provider provider) {
         super.loadAdditional(nbt, provider);
-        this.eye = nbt.getString("eye_inside");
+        this.eye = nbt.getString("eye_inside").orElse("");
     }
 
     // Sync With Client
@@ -62,7 +61,7 @@ public class AncientPortalFrameEntity  extends BlockEntity {
     }
 
     public Item getEyeItem() {
-        return BuiltInRegistries.ITEM.get(getEyeID());
+        return BuiltInRegistries.ITEM.get(getEyeID()).get().value();
     }
 
     public boolean isEmpty() {

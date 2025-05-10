@@ -8,12 +8,12 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.event.AddReloadListenerEvent;
+import net.neoforged.neoforge.event.AddServerReloadListenersEvent;
 
 @EventBusSubscriber(modid = Constants.MOD_ID, bus = EventBusSubscriber.Bus.GAME)
 public class VanillaLootInjector {
     @SubscribeEvent
-    public static void resourceReloadListener(AddReloadListenerEvent event) {
+    public static void resourceReloadListener(AddServerReloadListenersEvent event) {
         for (JsonEye eye : JsonEye.getEyes()) {
             for (ResourceLocation loot : eye.getLootTablesID()) {
                 ResourceKey<LootTable> resourceKey = ResourceKey.create(Registries.LOOT_TABLE, loot);

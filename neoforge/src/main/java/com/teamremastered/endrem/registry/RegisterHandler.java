@@ -5,7 +5,6 @@ import com.teamremastered.endrem.EndRemasteredCommon;
 import com.teamremastered.endrem.Constants;
 import com.teamremastered.endrem.client.AncientPortalRenderer;
 import com.teamremastered.endrem.client.EyeModel;
-import com.teamremastered.endrem.utils.LootInjector;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -24,7 +23,6 @@ public class RegisterHandler {
     }
 
     public static final DeferredRegister<MapCodec<? extends IGlobalLootModifier>> GLMS = DeferredRegister.create(NeoForgeRegistries.Keys.GLOBAL_LOOT_MODIFIER_SERIALIZERS, Constants.MOD_ID);
-    private static final DeferredHolder<MapCodec<? extends IGlobalLootModifier>, MapCodec<LootInjector.LootInjectorModifier>> LOOT_INJECTION = GLMS.register("loot_injection", LootInjector.LootInjectorModifier.CODEC);
 
     //TODO: Abstract the registries and subscribe the event inside the init function
     @SubscribeEvent

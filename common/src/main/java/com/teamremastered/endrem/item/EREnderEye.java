@@ -3,7 +3,7 @@ package com.teamremastered.endrem.item;
 import com.teamremastered.endrem.Constants;
 import com.teamremastered.endrem.block.AncientPortalFrame;
 import com.teamremastered.endrem.config.ConfigHandler;
-import com.teamremastered.endrem.mixin.accessor.EyeOfEnderEntityAccessorMixin;
+import com.teamremastered.endrem.mixin.accessor.EyeOfEnderEntityAccessor;
 import com.teamremastered.endrem.registry.CommonBlockRegistry;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.advancements.CriteriaTriggers;
@@ -17,11 +17,11 @@ import net.minecraft.stats.Stats;
 import net.minecraft.tags.StructureTags;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.EyeOfEnder;
 import net.minecraft.world.item.*;
+import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
@@ -35,6 +35,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
+import java.util.function.Consumer;
 
 @MethodsReturnNonnullByDefault
 public class EREnderEye extends Item {
@@ -44,9 +45,9 @@ public class EREnderEye extends Item {
     public static String eyePlaced = "empty";
 
     @Override
-    public void appendHoverText(ItemStack itemStack, TooltipContext world, List<Component> tooltip, TooltipFlag tooltipContext) {
+    public void appendHoverText(ItemStack itemStack, TooltipContext world, TooltipDisplay display, Consumer<Component> tooltip, TooltipFlag tooltipContext) {
         String translationKey= String.format("item.%s.%s.description", Constants.MOD_ID, this.getId());
-        tooltip.add(Component.translatable(translationKey));
+        tooltip.accept(Component.translatable(translationKey));
     }
 
     //Fill the Ancient Portal Frame
@@ -73,7 +74,7 @@ public class EREnderEye extends Item {
             BlockState newBlockState = CommonBlockRegistry.ANCIENT_PORTAL_FRAME.defaultBlockState();
             newBlockState = newBlockState.setValue(HorizontalDirectionalBlock.FACING, blockstate.getValue(HorizontalDirectionalBlock.FACING));
             newBlockState = newBlockState.setValue(AncientPortalFrame.HAS_EYE, Boolean.TRUE);
-            eyePlaced = this.getId(); // Setup the eye to render inside the block entity
+            eyePlaced = this.getId(); // Set up the eye to render inside the block entity
             if (AncientPortalFrame.isFrameAbsent(level, itemUse, blockpos)) {
                 Block.pushEntitiesUp(blockstate, newBlockState, level, blockpos);
                 level.setBlock(blockpos, newBlockState, 2);
@@ -94,7 +95,15 @@ public class EREnderEye extends Item {
                 }
                 return InteractionResult.CONSUME;
             }
-            itemUse.getPlayer().displayClientMessage(Component.translatable("block.endrem.custom_eye.place"), true);
+
+            // Display different message based on if the portal is well-built or not
+            BlockPattern.BlockPatternMatch isPortalWellBuilt = AncientPortalFrame.getCompletedPortalShape(false).find(level, blockpos);
+            if (isPortalWellBuilt == null) {
+                itemUse.getPlayer().displayClientMessage(Component.translatable("NOOOO"), true);
+            }
+            else {
+                itemUse.getPlayer().displayClientMessage(Component.translatable("block.endrem.custom_eye.place"), true);
+            }
             return InteractionResult.PASS;
         }
         else if (blockstate.is(Blocks.END_PORTAL_FRAME) && ConfigHandler.CAN_REMOVE_EYE) {
@@ -112,7 +121,7 @@ public class EREnderEye extends Item {
     @Override
 
     //Locate Structures
-    public InteractionResultHolder<ItemStack> use(Level levelIn, Player playerIn, InteractionHand handIn) {
+    public InteractionResult use(Level levelIn, Player playerIn, InteractionHand handIn) {
         ItemStack itemstack = playerIn.getItemInHand(handIn);
         BlockHitResult raytraceResult = getPlayerPOVHitResult(levelIn, playerIn, ClipContext.Fluid.NONE);
         boolean lookingAtFrame = false;
@@ -124,7 +133,7 @@ public class EREnderEye extends Item {
         }
 
         if (lookingAtFrame) {
-            return InteractionResultHolder.pass(itemstack);
+            return InteractionResult.PASS;
         } else {
             playerIn.startUsingItem(handIn);
             if (levelIn instanceof ServerLevel) {
@@ -133,7 +142,7 @@ public class EREnderEye extends Item {
                     EyeOfEnder eyeofenderentity = new EyeOfEnder(levelIn, playerIn.getX(), playerIn.getY(0.5D), playerIn.getZ());
                     eyeofenderentity.setItem(itemstack);
                     eyeofenderentity.signalTo(blockpos);
-                    ((EyeOfEnderEntityAccessorMixin) eyeofenderentity).setSurviveAfterDeath(ConfigHandler.EYE_BREAK_PROBABILITY <= playerIn.getRandom().nextInt(100));
+                    ((EyeOfEnderEntityAccessor) eyeofenderentity).setSurviveAfterDeath(ConfigHandler.EYE_BREAK_PROBABILITY <= playerIn.getRandom().nextInt(100));
 
                     levelIn.addFreshEntity(eyeofenderentity);
                     if (playerIn instanceof ServerPlayer) {
@@ -149,23 +158,11 @@ public class EREnderEye extends Item {
 
                     playerIn.awardStat(Stats.ITEM_USED.get(this));
                     playerIn.swing(handIn, true);
-                    return InteractionResultHolder.success(itemstack);
+                    return InteractionResult.SUCCESS;
                 }
             }
-            return InteractionResultHolder.consume(itemstack);
+            return InteractionResult.CONSUME;
         }
-    }
-
-    //TODO: Forge specific, find a common implementation
-//    @Override
-//    public boolean isDamageable(ItemStack stack) {
-//        return !this.asItem().canBeDepleted();
-//    }
-
-//    @OnlyIn(Dist.CLIENT)
-    public void appendHoverText(ItemStack stack, @Nullable Level levelIn, List<Component> tooltip, TooltipFlag flagIn) {
-        String translationKey = String.format("item.%s.%s.description", Constants.MOD_ID, this.asItem());
-        tooltip.add(Component.translatable(translationKey));
     }
 
     public String getId() {

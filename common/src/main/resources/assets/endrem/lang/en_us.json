@@ -50,7 +50,8 @@
 
   "item.endrem.undead_soul": "Undead Soul",
 
-  "block.endrem.ancient_portal_frame": "Ancient Portal Frame",
+  "item.endrem.ancient_portal_frame": "Ancient Portal Frame",
+
 
   "block.endrem.ender_eye.warning": "The eye doesn't want to be used",
   "block.endrem.custom_eye.place": "The eye can't be placed",

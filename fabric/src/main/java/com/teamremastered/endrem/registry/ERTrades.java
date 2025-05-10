@@ -2,6 +2,7 @@ package com.teamremastered.endrem.registry;
 
 import com.teamremastered.endrem.config.ConfigHandler;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.npc.VillagerProfession;
@@ -39,7 +40,8 @@ public class ERTrades {
         if (ConfigHandler.IS_EVIL_EYE_OBTAINABLE) {
             TradeOfferHelper.registerVillagerOffers(VillagerProfession.CLERIC, 5, factories -> factories.add(new EREyeTrade()));
 
-            TradeOfferHelper.registerWanderingTraderOffers(0, factories -> factories.add(new EREyeTrade()));
+            TradeOfferHelper.registerWanderingTraderOffers(factories ->
+                    factories.addOffersToPool(ResourceLocation.fromNamespaceAndPath("endrem", "idk"), new EREyeTrade()));
         }
     }
 }

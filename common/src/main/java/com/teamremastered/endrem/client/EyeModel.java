@@ -11,13 +11,8 @@ import net.minecraft.client.renderer.RenderType;
 public class EyeModel extends Model {
     private final ModelPart eye;
     public EyeModel(ModelPart root) {
-        super(RenderType::entitySolid);
+        super(root, RenderType::entitySolid);
         eye = root.getChild("eye");
-    }
-
-    @Override
-    public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int combinedLight, int combinedOverlay, int i2) {
-        this.render(poseStack, vertexConsumer, combinedLight, combinedOverlay, i2);
     }
 
     public void render(PoseStack poseStack, VertexConsumer vertexConsumer, int combinedLight, int combinedOverlay, int p_350753_) {

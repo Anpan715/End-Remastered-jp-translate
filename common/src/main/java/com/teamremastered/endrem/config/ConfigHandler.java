@@ -1,7 +1,7 @@
 package com.teamremastered.endrem.config;
 
 public class ConfigHandler {
-    private static ConfigOptions CONFIG = ConfigOptions.getERConfig();
+    private static final ConfigOptions CONFIG = ConfigOptions.getERConfig();
 
     public static final boolean USE_EYE_OF_ENDER = CONFIG.USE_EYE_OF_ENDER;
     public static final boolean THROW_EYE_OF_ENDER = CONFIG.THROW_EYE_OF_ENDER;

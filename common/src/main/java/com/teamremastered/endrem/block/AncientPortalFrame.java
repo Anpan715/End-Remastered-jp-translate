@@ -2,10 +2,14 @@ package com.teamremastered.endrem.block;
 
 import com.google.common.base.Predicate;
 import com.google.common.base.Predicates;
+import com.teamremastered.endrem.Constants;
 import com.teamremastered.endrem.item.EREnderEye;
 import com.teamremastered.endrem.registry.CommonBlockRegistry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.BlockGetter;
@@ -27,7 +31,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class AncientPortalFrame extends Block implements EntityBlock {
     public static final BooleanProperty HAS_EYE = BlockStateProperties.EYE;
-    public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
+    public static final EnumProperty<Direction> FACING = HorizontalDirectionalBlock.FACING;
 
     // Declare Voxel Shapes (BASE = no eye, EYE = only eye, FULL = both)
     protected static final VoxelShape BASE_SHAPE = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 13.0D, 16.0D);
@@ -84,7 +88,7 @@ public class AncientPortalFrame extends Block implements EntityBlock {
                 .lightLevel((p_152690_) -> 1)
                 .strength(-1.0F, 3600000.0F)
                 .noLootTable()
-        );
+                .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "ancient_portal_frame"))));
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(HAS_EYE, Boolean.FALSE));
     }
 
@@ -112,41 +116,27 @@ public class AncientPortalFrame extends Block implements EntityBlock {
     //TODO: Make it a provider class
     public static boolean isFrameAbsent(Level levelIn, UseOnContext itemUse, BlockPos pos) {
         BlockPattern.BlockPatternMatch blockpattern$patternhelper = getCompletedPortalShape(false).find(levelIn, pos);
-        BlockPos frontTopLeft = blockpattern$patternhelper.getFrontTopLeft().offset(-4, 0, -4);
 
-        for (int i = 0; i < 5; ++i) {
-            for (int j = 0; j < 5; ++j) {
-                BlockPos blockPos = frontTopLeft.offset(i, 0, j);
-                BlockEntity blockEntity = levelIn.getBlockEntity(blockPos);
+        if (blockpattern$patternhelper != null) {
+            BlockPos frontTopLeft = blockpattern$patternhelper.getFrontTopLeft().offset(-4, 0, -4);
 
-                if (blockEntity instanceof AncientPortalFrameEntity ancientPortalFrameEntity) {
-                    if (!ancientPortalFrameEntity.isEmpty() && ancientPortalFrameEntity.getEyeItem().equals(itemUse.getItemInHand().getItem())) {
+            for (int i = 0; i < 5; ++i) {
+                for (int j = 0; j < 5; ++j) {
+                    BlockPos blockPos = frontTopLeft.offset(i, 0, j);
+                    BlockEntity blockEntity = levelIn.getBlockEntity(blockPos);
+
+                    if (blockEntity instanceof AncientPortalFrameEntity ancientPortalFrameEntity) {
+                        if (!ancientPortalFrameEntity.isEmpty() && ancientPortalFrameEntity.getEyeItem().equals(itemUse.getItemInHand().getItem())) {
                             return false;
+                        }
                     }
                 }
             }
+            return true;
         }
-        return true;
+
+        return false;
     }
-
-//                BlockState stateInPortal = levelIn.getBlockState(blockPos);
-//                if (!stateInPortal.is(CommonBlockRegistry.ANCIENT_PORTAL_FRAME)) {
-//                    continue;
-//                }
-//                else if (!stateInPortal.getValue(AncientPortalFrame.HAS_EYE)) {
-//                    continue;
-//                }
-//
-//                AncientPortalFrameEntity frameEntity = (AncientPortalFrameEntity) levelIn.getBlockEntity(posInPortal);
-//                if (frameEntity == null) {
-//                    Constants.LOGGER.warn("COULD NOT INSTANTIATE ANCIENT PORTAL FRAME ENTITY!");
-//                    continue;
-//                }
-//
-//                if (frameEntity.getEyeItem() == itemUse.getItemInHand().getItem()) {
-//                    return false;
-//                }
-
 
     @Nullable
     @Override

@@ -5,8 +5,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.gen.Accessor;
 
 @Mixin(EyeOfEnder.class)
-public interface EyeOfEnderEntityAccessorMixin {
+public interface EyeOfEnderEntityAccessor {
     @Accessor("surviveAfterDeath")
     public void setSurviveAfterDeath(boolean dropsItem);
-
 }

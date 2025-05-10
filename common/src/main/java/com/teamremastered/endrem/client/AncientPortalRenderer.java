@@ -2,7 +2,6 @@ package com.teamremastered.endrem.client;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.teamremastered.endrem.Constants;
 import com.teamremastered.endrem.EndRemasteredCommon;
 import com.teamremastered.endrem.block.AncientPortalFrameEntity;
 import com.teamremastered.endrem.registry.CommonModelRegistry;
@@ -13,12 +12,9 @@ import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.renderer.texture.TextureAtlas;
 import net.minecraft.client.resources.model.Material;
 import net.minecraft.core.Direction;
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
-import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.phys.Vec3;
 import org.joml.Matrix4f;
-
-import java.util.Properties;
 
 public class AncientPortalRenderer implements BlockEntityRenderer<AncientPortalFrameEntity> {
     private final EyeModel eyeModel;
@@ -39,7 +35,7 @@ public class AncientPortalRenderer implements BlockEntityRenderer<AncientPortalF
     }
 
     @Override
-    public void render(AncientPortalFrameEntity ancientPortalFrameEntity, float partialTick, PoseStack poseStack, MultiBufferSource multiBufferSource, int combinedLight, int combinedOverlay) {
+    public void render(AncientPortalFrameEntity ancientPortalFrameEntity, float partialTick, PoseStack poseStack, MultiBufferSource multiBufferSource, int combinedLight, int combinedOverlay, Vec3 vector3) {
         if (!ancientPortalFrameEntity.isEmpty()) {
             Direction FACING = ancientPortalFrameEntity.getBlockState().getValue(HorizontalDirectionalBlock.FACING);
 
