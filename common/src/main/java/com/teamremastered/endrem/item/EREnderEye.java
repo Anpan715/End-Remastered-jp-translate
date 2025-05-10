@@ -99,7 +99,7 @@ public class EREnderEye extends Item {
             // Display different message based on if the portal is well-built or not
             BlockPattern.BlockPatternMatch isPortalWellBuilt = AncientPortalFrame.getCompletedPortalShape(false).find(level, blockpos);
             if (isPortalWellBuilt == null) {
-                itemUse.getPlayer().displayClientMessage(Component.translatable("NOOOO"), true);
+                itemUse.getPlayer().displayClientMessage(Component.translatable("block.endrem.custom_eye.portal_not_built_well"), true);
             }
             else {
                 itemUse.getPlayer().displayClientMessage(Component.translatable("block.endrem.custom_eye.place"), true);
