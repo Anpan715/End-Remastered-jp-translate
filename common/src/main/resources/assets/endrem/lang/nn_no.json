@@ -1,0 +1,117 @@
+{
+  "item.endrem.old_eye": "Gamalt auga",
+  "item.endrem.old_eye.description": "§7§oSegna seier at dette auga ein gong tilhøyrde ein av dei store sandormane",
+
+  "item.endrem.rogue_eye": "Slyngelauga",
+  "item.endrem.rogue_eye.description": "§7§oDette auga blir trudd å ha gitt forfedrane våre kunna om Redstone",
+
+  "item.endrem.nether_eye": "Netherauga",
+  "item.endrem.nether_eye.description": "§7§oDet gjekk tapt då ein demon fall i slaget mellom Aether og Nether",
+
+  "item.endrem.cold_eye": "Kaldt auga",
+  "item.endrem.cold_eye.description": "§7§oEit av dei siste artefakta etter isologane før dei plutseleg forsvann frå verda",
+
+  "item.endrem.magical_eye": "Trolldomsauga",
+  "item.endrem.magical_eye.description": "§7§oUtan dette auga har ikkje Åndemanaren trolldomskrefter",
+
+  "item.endrem.black_eye": "Svart auga",
+  "item.endrem.black_eye.description": "§7§oPiratar seier det gav syn åt den legendariske Svarte Perla",
+
+  "item.endrem.lost_eye": "Tapt auga",
+  "item.endrem.lost_eye.description": "§7§oDet blir fortalt at det blei smidd av dei fyrste smedane i tida",
+
+  "item.endrem.wither_eye": "Witherauga",
+  "item.endrem.wither_eye.description": "§7§oHar vitna øydelegging.  Kanskje vitna det òg tinga dine forsvinne",
+
+  "item.endrem.guardian_eye": "Verjarauga",
+  "item.endrem.guardian_eye.description": "§7§oDet har sett mong ein krigar drukne i havdjupet.",
+
+  "item.endrem.corrupted_eye": "Korrupt auga",
+  "item.endrem.corrupted_eye.description": "§7§oAuget åt ein grådig konge som falma i einsemd. Segna seier at det vil bringe uendeleg rikdom til eigaren.",
+
+  "item.endrem.cursed_eye": "Forbant auga",
+  "item.endrem.cursed_eye.description": "§7§oEit mektig, men øydeleggjande artefakt; Piglinane svor å verna det med liva sine.",
+
+  "item.endrem.exotic_eye": "Eksotisk auga",
+  "item.endrem.exotic_eye.description": "§7§oDei som følgde dette auga, vart aldri sett igjen. Rykta seier dei fann den tapte byen Atlantis, eller gjekk seg vill på vegen",
+
+  "item.endrem.evil_eye": "Vondkyndt auga",
+  "item.endrem.evil_eye.description": "§7§oEin heilag talisman som visstnok vernar eigaren mot uflaks",
+
+  "item.endrem.undead_eye": "Daudingsauga",
+  "item.endrem.undead_eye.description": "§7§oEit minne om dei tidlegare liva til dei vandaude",
+
+  "item.endrem.cryptic_eye": "Kryptisk auga",
+  "item.endrem.cryptic_eye.description": "§7§o§khttps://www.youtube.com/watch?v=dQw4w9WgXcQ",
+
+  "item.endrem.witch_eye": "Trollkjærringsauga",
+ "item.endrem.witch_eye.description": "§7§oDette auga blir trudd å ha sett dei eldgamle bryggeoppskriftene som gjekk tapt med tida",
+
+  "item.endrem.witch_pupil": "Trollkjærringspupill",
+
+  "item.endrem.undead_soul": "Daudingsjel",
+
+  "block.endrem.ancient_portal_frame": "Eldgammal Portalramme",
+
+  "block.endrem.ender_eye.warning": "Auga vil ikkje nyttast",
+  "block.endrem.custom_eye.place": "Auga er alt plassert",
+  "block.endrem.custom_eye.portal_not_built_well": "Portalen er ikkje bygd rett",
+  "block.endrem.custom_eye.frame_has_eye": "Ramma har alt eit auga",
+
+
+  "itemGroup.endremTab": "End Remastered",
+
+  "block.portal_open_sound": "Portal opnast",
+  "block.portal_open_sound.sub": "Portal opnast",
+
+  "advancements.main.root.title": "Byrjinga på eit eventyr",
+  "advancements.main.root.description": "Skaff deg ditt fyrste auga",
+
+  "advancements.main.old_eye.title": "Lykkesøkjar",
+  "advancements.main.old_eye.description": "Skaff deg ditt fyrste Gamalt auga",
+
+  "advancements.main.rogue_eye.title": "Velkomen til jungelen",
+  "advancements.main.rogue_eye.description": "Skaff deg ditt fyrste Slyngelauga",
+
+  "advancements.main.nether_eye.title": "Stirre inn i fortviling",
+  "advancements.main.nether_eye.description": "Skaff deg ditt fyrste Netherauga",
+
+  "advancements.main.cold_eye.title": "Eit kaldt blikk",
+  "advancements.main.cold_eye.description": "Skaff deg ditt fyrste Kaldt auga",
+
+  "advancements.main.corrupted_eye.title": "Dekk meg i smaragdar",
+  "advancements.main.corrupted_eye.description": "Skaff deg ditt fyrste Korrupt auga",
+
+  "advancements.main.magical_eye.title": "Fallen trollmann",
+  "advancements.main.magical_eye.description": "Skaff deg ditt fyrste Trolldomsauga",
+
+  "advancements.main.black_eye.title": "Arghh, kvar er skipet mitt?",
+  "advancements.main.black_eye.description": "Skaff deg ditt fyrste Svart auga",
+
+  "advancements.main.lost_eye.title": "Treng du eit kart?",
+  "advancements.main.lost_eye.description": "Skaff deg ditt fyrste Tapt auga",
+
+  "advancements.main.wither_eye.title": "Wither du vil eller ikkje",
+  "advancements.main.wither_eye.description": "Skaff deg ditt fyrste Witherauga",
+
+  "advancements.main.guardian_eye.title": "Kven vaktar tempelet no?",
+  "advancements.main.guardian_eye.description": "Skaff deg ditt fyrste Verjarauga",
+
+  "advancements.main.cursed_eye.title": "En ny beskytter...",
+  "advancements.main.cursed_eye.description": "Skaff ditt første Forbannet øye",
+
+  "advancements.main.witch_eye.title": "Knask eller Knep?",
+  "advancements.main.witch_eye.description": "Skaff deg ditt fyrste Trollkjærringsauga",
+
+  "advancements.main.evil_eye.title": "For ei velsigning",
+  "advancements.main.evil_eye.description": "Skaff deg ditt fyrste Forbant auga",
+
+  "advancements.main.exotic_eye.title": "Kvar er Atlantis?",
+  "advancements.main.exotic_eye.description": "Skaff deg ditt fyrste Eksotisk auga",
+
+  "advancements.main.undead_eye.title": "Sjela sitt spegel",
+  "advancements.main.undead_eye.description": "Skaff deg ditt fyrste Daudingsauga",
+
+  "advancements.main.cryptic_eye.title": "Tolmod er visdoms veg",
+  "advancements.main.cryptic_eye.description": "Skaff deg ditt fyrste Kryptisk auga"
+}
