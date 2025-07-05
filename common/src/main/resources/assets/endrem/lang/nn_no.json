@@ -21,16 +21,16 @@
   "item.endrem.lost_eye.description": "§7§oDet blir fortalt at det blei smidd av dei fyrste smedane i tida",
 
   "item.endrem.wither_eye": "Witherauga",
-  "item.endrem.wither_eye.description": "§7§oHar vitna øydelegging.  Kanskje vitna det òg tinga dine forsvinne",
+  "item.endrem.wither_eye.description": "§7§oHar vitna øydelegging.  Kanskje vitna det òg tinga dine kverva bort",
 
   "item.endrem.guardian_eye": "Verjarauga",
-  "item.endrem.guardian_eye.description": "§7§oDet har sett mong ein krigar drukne i havdjupet.",
+  "item.endrem.guardian_eye.description": "§7§oDet har vitna mong ein krigar drukna i havdjupet",
 
   "item.endrem.corrupted_eye": "Korrupt auga",
-  "item.endrem.corrupted_eye.description": "§7§oAuget åt ein grådig konge som falma i einsemd. Segna seier at det vil bringe uendeleg rikdom til eigaren.",
+  "item.endrem.corrupted_eye.description": "§7§oAuget åt ein grådig konge som falma i einsemd. Segna seier at det vil bringe uendeleg rikdom åt sin eigar",
 
   "item.endrem.cursed_eye": "Forbant auga",
-  "item.endrem.cursed_eye.description": "§7§oEit mektig, men øydeleggjande artefakt; Piglinane svor å verna det med liva sine.",
+  "item.endrem.cursed_eye.description": "§7§oEit mektig, men øydeleggjande artefakt; Piglinane svor å verja det med liva sine",
 
   "item.endrem.exotic_eye": "Eksotisk auga",
   "item.endrem.exotic_eye.description": "§7§oDei som følgde dette auga, vart aldri sett igjen. Rykta seier dei fann den tapte byen Atlantis, eller gjekk seg vill på vegen",
@@ -38,18 +38,18 @@
   "item.endrem.evil_eye": "Vondkyndt auga",
   "item.endrem.evil_eye.description": "§7§oEin heilag talisman som visstnok vernar eigaren mot uflaks",
 
-  "item.endrem.undead_eye": "Daudingsauga",
-  "item.endrem.undead_eye.description": "§7§oEit minne om dei tidlegare liva til dei vandaude",
+  "item.endrem.undead_eye": "Vandaudt auga",
+  "item.endrem.undead_eye.description": "§7§oEit minne om dei tidlegare liva åt dei vandaude",
 
   "item.endrem.cryptic_eye": "Kryptisk auga",
   "item.endrem.cryptic_eye.description": "§7§o§khttps://www.youtube.com/watch?v=dQw4w9WgXcQ",
 
   "item.endrem.witch_eye": "Trollkjærringsauga",
- "item.endrem.witch_eye.description": "§7§oDette auga blir trudd å ha sett dei eldgamle bryggeoppskriftene som gjekk tapt med tida",
+ "item.endrem.witch_eye.description": "§7§oDette auga blir trudd å ha vitna dei eldgamle bryggjeoppskriftene som gjekk tapt med tida",
 
   "item.endrem.witch_pupil": "Trollkjærringspupill",
 
-  "item.endrem.undead_soul": "Daudingsjel",
+  "item.endrem.undead_soul": "Vandaud sjel",
 
   "block.endrem.ancient_portal_frame": "Eldgammal Portalramme",
 
@@ -97,13 +97,13 @@
   "advancements.main.guardian_eye.title": "Kven vaktar tempelet no?",
   "advancements.main.guardian_eye.description": "Skaff deg ditt fyrste Verjarauga",
 
-  "advancements.main.cursed_eye.title": "En ny beskytter...",
+  "advancements.main.cursed_eye.title": "Ein ny vernar...",
   "advancements.main.cursed_eye.description": "Skaff ditt første Forbannet øye",
 
   "advancements.main.witch_eye.title": "Knask eller Knep?",
   "advancements.main.witch_eye.description": "Skaff deg ditt fyrste Trollkjærringsauga",
 
-  "advancements.main.evil_eye.title": "For ei velsigning",
+  "advancements.main.evil_eye.title": "Ei sann velsigning",
   "advancements.main.evil_eye.description": "Skaff deg ditt fyrste Forbant auga",
 
   "advancements.main.exotic_eye.title": "Kvar er Atlantis?",
