@@ -1,0 +1,117 @@
+{
+  "item.endrem.old_eye": "Eski Göz",
+  "item.endrem.old_eye.description": "§7§oEfsaneler, bu gözün bir zamanlar büyük Kum Solucanlarından birine ait olduğunu söyler",
+
+  "item.endrem.rogue_eye": "Haydut Göz",
+  "item.endrem.rogue_eye.description": "§7§oBu gözün, atalarımıza Redstone bilgisini verdiği düşünülüyor",
+
+  "item.endrem.nether_eye": "Nether Gözü",
+  "item.endrem.nether_eye.description": "§7§oAether ve Nether arasındaki savaşta bir iblis tarafından kaybedildi",
+
+  "item.endrem.cold_eye": "Soğuk Göz",
+  "item.endrem.cold_eye.description": "§7§oIceologer'lar dünyadan aniden kaybolmadan önce geride bıraktıkları son eserlerden biri",
+
+  "item.endrem.magical_eye": "Büyülü Göz",
+  "item.endrem.magical_eye.description": "§7§oBu göz olmadan, Uyandırıcı'nın gücü yoktur",
+
+  "item.endrem.black_eye": "Kara Göz",
+  "item.endrem.black_eye.description": "§7§oKorsanlar, onun efsanevi Kara İnci'ye görüş verdiğini söylüyor",
+
+  "item.endrem.lost_eye": "Kayıp Göz",
+  "item.endrem.lost_eye.description": "§7§oZamanın ilk demircileri tarafından dövüldüğü anlatılır",
+
+   "item.endrem.wither_eye": "Wither Gözü",
+  "item.endrem.wither_eye.description": "§7§oYıkıma tanık oldu. Belki eşyalarınızın kaybolmasına da tanık oldu",
+
+  "item.endrem.guardian_eye": "Gardiyan Gözü",
+  "item.endrem.guardian_eye.description": "§7§oDenizin derinliklerine batan birçok savaşçı gördü",
+
+  "item.endrem.cursed_eye": "Lanetli Göz",
+  "item.endrem.cursed_eye.description": "§7§oGüçlü ama yıkıcı bir eser; Piglinler onu hayatları pahasına korumaya yemin etti",
+
+  "item.endrem.exotic_eye": "Egzotik Göz",
+  "item.endrem.exotic_eye.description": "§7§oBu gözü takip edenler bir daha asla görülmedi; söylentilere göre Atlantis'in büyük şehrini buldular ya da onu ararken yollarını kaybettiler",
+
+  "item.endrem.evil_eye": "Şeytani Göz",
+  "item.endrem.evil_eye.description": "§7§oSahibini kötü şanstan koruduğu söylenen kutsal bir tılsım",
+
+  "item.endrem.undead_eye": "Ölmemiş Göz",
+  "item.endrem.undead_eye.description": "§7§oÖlümde, yaşayanların geçmiş yaşamlarının hatırası",
+
+  "item.endrem.cryptic_eye": "Gizemli Göz",
+  "item.endrem.cryptic_eye.description": "§7§o§khttps://www.youtube.com/watch?v=dQw4w9WgXcQ",
+
+  "item.endrem.corrupted_eye": "Yozlaşmış Göz",
+  "item.endrem.corrupted_eye.description": "§7§oYalnızlıkta solan açgözlü bir kralın gözü; efsaneye göre sahibine sonsuz servet getirecek",
+
+  "item.endrem.witch_eye": "Cadı Gözü",
+  "item.endrem.witch_eye.description": "§7§oBu göz bebeğinin, zamanda kaybolan eski demleme tariflerini gördüğüne inanılıyor.",
+  "item.endrem.witch_pupil": "Cadı Göz Bebeği",
+
+  "item.endrem.undead_soul": "Ölmemiş Ruh",
+
+  "item.endrem.ancient_portal_frame": "Antik Portal Çerçevesi",
+
+
+  "block.endrem.ender_eye.warning": "Göz kullanılmak istemiyor",
+  "block.endrem.custom_eye.place": "Göz zaten yerleştirildi",
+  "block.endrem.custom_eye.portal_not_built_well": "Portal doğru inşa edilmedi",
+  "block.endrem.custom_eye.frame_has_eye": "Çerçevenin zaten bir gözü var",
+
+
+  "itemGroup.endrem.endrem_tab": "End Remastered",
+
+  "block.portal_open_sound": "Portal Açılıyor",
+   "block.portal_open_sound.sub": "Portal Açılıyor",
+
+  "advancements.main.root.title": "Bir Maceranın Başlangıcı",
+  "advancements.main.root.description": "İlk Gözünü Elde Et",
+
+  "advancements.main.old_eye.title": "Servet Arayıcısı",
+  "advancements.main.old_eye.description": "İlk Eski Gözünü Elde Et",
+
+  "advancements.main.rogue_eye.title": "Ormana Hoş Geldin",
+  "advancements.main.rogue_eye.description": "İlk Haydut Gözünü Elde Et",
+
+  "advancements.main.nether_eye.title": "Umutsuzluğa Bak",
+  "advancements.main.nether_eye.description": "İlk Nether Gözünü Elde Et",
+
+  "advancements.main.cold_eye.title": "Güzel Bir Bakış",
+  "advancements.main.cold_eye.description": "İlk Soğuk Gözünü Elde Et",
+
+  "advancements.main.corrupted_eye.title": "Beni Zümrütlere Bulayın", "%%%%%%Comment%%%%%%": "Altın Yağmuru daha uygun ama neyse...",
+  "advancements.main.corrupted_eye.description": "İlk Yozlaşmış Gözünü Elde Et",
+
+  "advancements.main.magical_eye.title": "Düşmüş Büyücü",
+  "advancements.main.magical_eye.description": "İlk Büyülü Gözünü Elde Et",
+
+  "advancements.main.black_eye.title": "Arghh, Gemim Nerede?",
+  "advancements.main.black_eye.description": "İlk Kara Gözünü Elde Et",
+
+  "advancements.main.lost_eye.title": "Haritaya İhtiyacın Var mı?",
+  "advancements.main.lost_eye.description": "İlk Kayıp Gözünü Elde Et",
+
+  "advancements.main.wither_eye.title": "İstesen de İstemesen de Wither",
+  "advancements.main.wither_eye.description": "İlk Wither Gözünü Elde Et",
+
+  "advancements.main.guardian_eye.title": "Tapınağı Şimdi Kim Koruyor?",
+  "advancements.main.guardian_eye.description": "İlk Gardiyan Gözünü Elde Et",
+
+  "advancements.main.cursed_eye.title": "Yeni Bir Koruyucu...",
+  "advancements.main.cursed_eye.description": "İlk Lanetli Gözünü Elde Et",
+
+  "advancements.main.witch_eye.title": "Şaka mı Şeker mi?",
+  "advancements.main.witch_eye.description": "İlk Cadı Gözünü Elde Et",
+
+  "advancements.main.evil_eye.title": "Gerçek Bir Nimet",
+  "advancements.main.evil_eye.description": "İlk Şeytani Gözünü Elde Et",
+
+  "advancements.main.exotic_eye.title": "Atlantis Nerede?",
+  "advancements.main.exotic_eye.description": "İlk Egzotik Gözünü Elde Et",
+
+  "advancements.main.undead_eye.title": "Ruhun Aynası",
+  "advancements.main.undead_eye.description": "İlk Ölmemiş Gözünü Elde Et",
+
+  "advancements.main.cryptic_eye.title": "Sabır Bilgeliğe Giden Yoldur",
+  "advancements.main.cryptic_eye.description": "İlk Gizemli Gözünü Elde Et"
+}
